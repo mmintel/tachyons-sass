@@ -1,41 +1,12 @@
+.cover { background-size: cover!important; }
+.contain { background-size: contain!important; }
 
-// Converted Variables
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-
-// Custom Media Query Variables
-
-
-/*
-
-   BACKGROUND SIZE
-   Docs: http://tachyons.io/docs/themes/background-size/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-
-/*
-  Often used in combination with background image set as an inline style
-  on an html element.
-*/
-
-  .cover { background-size: cover!important; }
-  .contain { background-size: contain!important; }
-
-@media #{$breakpoint-not-small} {
-  .cover-ns { background-size: cover!important; }
-  .contain-ns { background-size: contain!important; }
-}
-
-@media #{$breakpoint-medium} {
-  .cover-m { background-size: cover!important; }
-  .contain-m { background-size: contain!important; }
-}
-
-@media #{$breakpoint-large} {
-  .cover-l { background-size: cover!important; }
-  .contain-l { background-size: contain!important; }
-}
+    @media #{$breakpoint-value} {
+      .cover\@#{$breakpoint-id} { background-size: cover!important; }
+      .contain\@#{$breakpoint-id} { background-size: contain!important; }
+    }
+  }

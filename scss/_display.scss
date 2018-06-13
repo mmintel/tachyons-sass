@@ -1,36 +1,3 @@
-
-// Converted Variables
-
-
-// Custom Media Query Variables
-
-
-/*
-
-   DISPLAY
-   Docs: http://tachyons.io/docs/layout/display
-
-   Base:
-    d = display
-
-   Modifiers:
-    n     = none
-    b     = block
-    ib    = inline-block
-    it    = inline-table
-    t     = table
-    tc    = table-cell
-    tr    = table-row
-    tcol  = table-column
-    tcolg = table-column-group
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-
 .dn {              display: none; }
 .di {              display: inline; }
 .db {              display: block; }
@@ -52,60 +19,28 @@
   width: 100%;
 }
 
-@media #{$breakpoint-not-small} {
-  .dn-ns {              display: none; }
-  .di-ns {              display: inline; }
-  .db-ns {              display: block; }
-  .dib-ns {             display: inline-block; }
-  .dit-ns {             display: inline-table; }
-  .dt-ns {              display: table; }
-  .dtc-ns {             display: table-cell; }
-  .dt-row-ns {          display: table-row; }
-  .dt-row-group-ns {    display: table-row-group; }
-  .dt-column-ns {       display: table-column; }
-  .dt-column-group-ns { display: table-column-group; }
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-  .dt--fixed-ns {
-    table-layout: fixed;
-    width: 100%;
+    @media #{$breakpoint-value} {
+      .f#{$id}\@#{$breakpoint-id} {
+        font-size: $value;
+      }
+      .dn\@#{$breakpoint-id} {              display: none; }
+      .di\@#{$breakpoint-id} {              display: inline; }
+      .db\@#{$breakpoint-id} {              display: block; }
+      .dib\@#{$breakpoint-id} {             display: inline-block; }
+      .dit\@#{$breakpoint-id} {             display: inline-table; }
+      .dt\@#{$breakpoint-id} {              display: table; }
+      .dtc\@#{$breakpoint-id} {             display: table-cell; }
+      .dt-row\@#{$breakpoint-id} {          display: table-row; }
+      .dt-row-group\@#{$breakpoint-id} {    display: table-row-group; }
+      .dt-column\@#{$breakpoint-id} {       display: table-column; }
+      .dt-column-group\@#{$breakpoint-id} { display: table-column-group; }
+      .dt--fixed\@#{$breakpoint-id} {
+        table-layout: fixed;
+        width: 100%;
+      }
+    }
   }
-}
-
-@media #{$breakpoint-medium} {
-  .dn-m {              display: none; }
-  .di-m {              display: inline; }
-  .db-m {              display: block; }
-  .dib-m {             display: inline-block; }
-  .dit-m {             display: inline-table; }
-  .dt-m {              display: table; }
-  .dtc-m {             display: table-cell; }
-  .dt-row-m {          display: table-row; }
-  .dt-row-group-m {    display: table-row-group; }
-  .dt-column-m {       display: table-column; }
-  .dt-column-group-m { display: table-column-group; }
-
-  .dt--fixed-m {
-    table-layout: fixed;
-    width: 100%;
-  }
-}
-
-@media #{$breakpoint-large} {
-  .dn-l {              display: none; }
-  .di-l {              display: inline; }
-  .db-l {              display: block; }
-  .dib-l {             display: inline-block; }
-  .dit-l {             display: inline-table; }
-  .dt-l {              display: table; }
-  .dtc-l {             display: table-cell; }
-  .dt-row-l {          display: table-row; }
-  .dt-row-group-l {    display: table-row-group; }
-  .dt-column-l {       display: table-column; }
-  .dt-column-group-l { display: table-column-group; }
-
-  .dt--fixed-l {
-    table-layout: fixed;
-    width: 100%;
-  }
-}
-

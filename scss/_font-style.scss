@@ -1,36 +1,12 @@
-
-// Converted Variables
-
-
-// Custom Media Query Variables
-
-
-/*
-
-   FONT STYLE
-   Docs: http://tachyons.io/docs/typography/font-style/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-
 .i         { font-style: italic; }
 .fs-normal { font-style: normal; }
 
-@media #{$breakpoint-not-small} {
-  .i-ns       { font-style: italic; }
-  .fs-normal-ns     { font-style: normal; }
-}
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-@media #{$breakpoint-medium} {
-  .i-m       { font-style: italic; }
-  .fs-normal-m     { font-style: normal; }
-}
-
-@media #{$breakpoint-large} {
-  .i-l       { font-style: italic; }
-  .fs-normal-l     { font-style: normal; }
-}
+    @media #{$breakpoint-value} {
+      .i\@#{$breakpoint-id}         { font-style: italic; }
+      .fs-normal\@#{$breakpoint-id} { font-style: normal; }
+    }
+  }

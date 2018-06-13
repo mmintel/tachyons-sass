@@ -62,6 +62,36 @@
     margin-right: $value;
   }
 
+  .na#{$id} {
+    margin: $value * -1;
+  }
+
+  .nl#{$id} {
+    margin-left: $value * -1;
+  }
+
+  .nr#{$id} {
+    margin-right: $value * -1;
+  }
+
+  .nb#{$id} {
+    margin-bottom: $value * -1;
+  }
+
+  .nt#{$id} {
+    margin-top: $value * -1;
+  }
+
+  .nv#{$id} {
+    margin-top: $value * -1;
+    margin-bottom: $value * -1;
+  }
+
+  .nh#{$id} {
+    margin-left: $value * -1;
+    margin-right: $value * -1;
+  }
+
   @each $breakpoint in $breakpoints {
     $breakpoint-id: nth($breakpoint, 1);
     $breakpoint-value: nth($breakpoint, 2);

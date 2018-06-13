@@ -1,16 +1,3 @@
-
-// Converted Variables
-
-
-// Custom Media Query Variables
-
-
-/*
-
-   ROTATIONS
-
-*/
-
 .rotate-45 { transform: rotate(45deg); }
 .rotate-90 { transform: rotate(90deg); }
 .rotate-135 { transform: rotate(135deg); }
@@ -19,32 +6,17 @@
 .rotate-270 { transform: rotate(270deg); }
 .rotate-315 { transform: rotate(315deg); }
 
-@media #{$breakpoint-not-small}{
-  .rotate-45-ns { transform: rotate(45deg); }
-  .rotate-90-ns { transform: rotate(90deg); }
-  .rotate-135-ns { transform: rotate(135deg); }
-  .rotate-180-ns { transform: rotate(180deg); }
-  .rotate-225-ns { transform: rotate(225deg); }
-  .rotate-270-ns { transform: rotate(270deg); }
-  .rotate-315-ns { transform: rotate(315deg); }
-}
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-@media #{$breakpoint-medium}{
-  .rotate-45-m { transform: rotate(45deg); }
-  .rotate-90-m { transform: rotate(90deg); }
-  .rotate-135-m { transform: rotate(135deg); }
-  .rotate-180-m { transform: rotate(180deg); }
-  .rotate-225-m { transform: rotate(225deg); }
-  .rotate-270-m { transform: rotate(270deg); }
-  .rotate-315-m { transform: rotate(315deg); }
-}
-
-@media #{$breakpoint-large}{
-  .rotate-45-l { transform: rotate(45deg); }
-  .rotate-90-l { transform: rotate(90deg); }
-  .rotate-135-l { transform: rotate(135deg); }
-  .rotate-180-l { transform: rotate(180deg); }
-  .rotate-225-l { transform: rotate(225deg); }
-  .rotate-270-l { transform: rotate(270deg); }
-  .rotate-315-l { transform: rotate(315deg); }
-}
+    @media #{$breakpoint-value} {
+      .rotate-45\@#{$breakpoint-id} { transform: rotate(45deg); }
+      .rotate-90\@#{$breakpoint-id} { transform: rotate(90deg); }
+      .rotate-135\@#{$breakpoint-id} { transform: rotate(135deg); }
+      .rotate-180\@#{$breakpoint-id} { transform: rotate(180deg); }
+      .rotate-225\@#{$breakpoint-id} { transform: rotate(225deg); }
+      .rotate-270\@#{$breakpoint-id} { transform: rotate(270deg); }
+      .rotate-315\@#{$breakpoint-id} { transform: rotate(315deg); }
+    }
+  }

@@ -19,11 +19,15 @@ npm install --save @mmintel/tachyons-sass
     - `$transparencies`
     - `$grays`
     - `$shadows`
+    - `$text-shadows`
     - `$thicknesses`
     - `$radii`
 * changed names of gray tones, now `.gray1`, `.gray2`...
+* changed `.list` to `.no-list`
+* changed `.mw` to `.max-w`
 * added `.circle`
 * added `.fill-*` classes, e.g. `.fill-gray5`
+* added `.t-shadow*`
 * removed colors completely
 * removed `inherit` classes completely
 * removed debugging classes
@@ -32,6 +36,9 @@ npm install --save @mmintel/tachyons-sass
     - `.f-subheadline`
     - `.f-5`
     - `.f-6`
+* removed gradients
+* removed font families
+* removed hover effects
 
 ## Usage
 

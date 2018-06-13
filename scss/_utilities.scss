@@ -1,21 +1,3 @@
-
-// Converted Variables
-
-
-// Custom Media Query Variables
-
-
-/*
-
-   UTILITIES
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-
 /* Equivalent to .overflow-y-scroll */
 .overflow-container {
   overflow-y: scroll;
@@ -29,29 +11,21 @@
 .mr-auto { margin-right: auto; }
 .ml-auto { margin-left:  auto; }
 
-@media #{$breakpoint-not-small}{
-  .center-ns {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .mr-auto-ns { margin-right: auto; }
-  .ml-auto-ns { margin-left:  auto; }
-}
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-@media #{$breakpoint-medium}{
-  .center-m {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .mr-auto-m { margin-right: auto; }
-  .ml-auto-m { margin-left:  auto; }
-}
+    @media #{$breakpoint-value} {
+      .overflow-container\@#{$breakpoint-id} {
+        overflow-y: scroll;
+      }
 
-@media #{$breakpoint-large}{
-  .center-l {
-    margin-right: auto;
-    margin-left: auto;
+      .center\@#{$breakpoint-id} {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .mr-auto\@#{$breakpoint-id} { margin-right: auto; }
+      .ml-auto\@#{$breakpoint-id} { margin-left:  auto; }
+    }
   }
-  .mr-auto-l { margin-right: auto; }
-  .ml-auto-l { margin-left:  auto; }
-}

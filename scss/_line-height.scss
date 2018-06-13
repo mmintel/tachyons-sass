@@ -1,41 +1,14 @@
+.lh-solid { line-height: $line-height-solid; }
+.lh-title { line-height: $line-height-title; }
+.lh-copy  { line-height: $line-height-copy; }
 
-// Converted Variables
+@each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
 
-
-// Custom Media Query Variables
-
-
-/*
-
-   LINE HEIGHT / LEADING
-   Docs: http://tachyons.io/docs/typography/line-height
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-
-  .lh-solid { line-height: $line-height-solid; }
-  .lh-title { line-height: $line-height-title; }
-  .lh-copy  { line-height: $line-height-copy; }
-
-@media #{$breakpoint-not-small} {
-  .lh-solid-ns { line-height: $line-height-solid; }
-  .lh-title-ns { line-height: $line-height-title; }
-  .lh-copy-ns  { line-height: $line-height-copy; }
-}
-
-@media #{$breakpoint-medium} {
-  .lh-solid-m { line-height: $line-height-solid; }
-  .lh-title-m { line-height: $line-height-title; }
-  .lh-copy-m  { line-height: $line-height-copy; }
-}
-
-@media #{$breakpoint-large} {
-  .lh-solid-l { line-height: $line-height-solid; }
-  .lh-title-l { line-height: $line-height-title; }
-  .lh-copy-l  { line-height: $line-height-copy; }
-}
-
+    @media #{$breakpoint-value} {
+      .lh-solid\@#{$breakpoint-id} { line-height: $line-height-solid; }
+      .lh-title\@#{$breakpoint-id} { line-height: $line-height-title; }
+      .lh-copy\@#{$breakpoint-id}  { line-height: $line-height-copy; }
+    }
+  }

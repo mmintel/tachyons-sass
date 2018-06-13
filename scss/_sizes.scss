@@ -6,8 +6,24 @@
     height: $value;
   }
 
+  .max-h#{$id} {
+    max-height: $value;
+  }
+
+  .min-h#{$id} {
+    min-height: $value;
+  }
+
   .w#{$id} {
     width: $value;
+  }
+
+  .max-w#{$id} {
+    max-width: $value;
+  }
+
+  .min-w#{$id} {
+    min-width: $value;
   }
 
   @each $breakpoint in $breakpoints {
@@ -34,24 +50,24 @@
     height: $value * 1rem;
   }
 
-  .vh-#{$id} {
-    height: $value * 1vh;
+  .max-h-#{$id} {
+    max-height: $value * 1rem;
   }
 
-  .min-vh-#{$id} {
-    min-height: $value * 1vh;
+  .vh-#{$id} {
+    height: $value * 1vh;
   }
 
   .w-#{$id} {
     width: $value * 1rem;
   }
 
-  .vw-#{$id} {
-    width: $value * 1vw;
+  .max-w-#{$id} {
+    max-width: $value * 1rem;
   }
 
-  .min-vw-#{$id} {
-    min-width: $value * 1vw;
+  .vw-#{$id} {
+    width: $value * 1vw;
   }
 
   @each $breakpoint in $breakpoints {

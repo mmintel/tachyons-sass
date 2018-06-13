@@ -1,0 +1,19 @@
+@each $text-shadow in $text-shadows {
+  $id: nth($text-shadow, 1);
+  $value: nth($text-shadow, 2);
+
+  .t-shadow#{$id} {
+    text-shadow: $value;
+  }
+
+  @each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
+
+    @media #{$breakpoint-value} {
+      .t-shadow#{$id}\@#{$breakpoint-id} {
+        text-shadow: $value;
+      }
+    }
+  }
+}

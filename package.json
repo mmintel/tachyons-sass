@@ -2,12 +2,12 @@
   "name": "@mmintel/tachyons-sass",
   "description": "Super flexible SCSS port of tachyons",
   "author": "Marc Mintel",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "style": "tachyons.scss",
   "scripts": {
-    "start": "node build.js",
-    "test": "ava",
-    "lint": "standard --fix"
+    "build": "node-sass ./tachyons.scss -o ./dist",
+    "lint": "standard --fix",
+    "prepublish": "npm run build"
   },
   "repository": "@mmintel/tachyons-sass",
   "keywords": [
@@ -18,13 +18,7 @@
     "scss"
   ],
   "license": "MIT",
-  "dependencies": {
-    "tachyons-custom": "^4.9.2"
-  },
   "devDependencies": {
-    "ava": "^0.22.0",
-    "css-scss": "^0.1.0",
-    "glob": "^7.1.2",
     "node-sass": "^4.5.3",
     "standard": "^10.0.3"
   }

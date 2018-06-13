@@ -1,6 +1,6 @@
-# tachyons-sass [![Build Status](https://travis-ci.org/tachyons-css/tachyons-sass.svg?branch=master)](https://travis-ci.org/tachyons-css/tachyons-sass)
+# tachyons-sass
 
-Super flexible SCSS tachyons fork.
+Super flexible SCSS port of tachyons.
 
 ## Installation
 

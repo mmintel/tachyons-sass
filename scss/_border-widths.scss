@@ -1,6 +1,6 @@
 @each $thickness in $thicknesses {
-  $id: nth($font-size, 1);
-  $value: nth($font-size, 2) * 1rem;
+  $id: nth($thickness, 1);
+  $value: nth($thickness, 2) * 1rem;
 
   .bw#{$id} {
     border-width: $value;

@@ -1,6 +1,6 @@
 @each $gray in $grays {
-  $id: nth($font-size, 1);
-  $value: nth($font-size, 2);
+  $id: nth($gray, 1);
+  $value: nth($gray, 2);
 
   .b--gray#{$id} {
     border-color: $value;
@@ -20,4 +20,4 @@
   }
 }
 
-.b--transparent { border-color: $transparent; }
+.b--transparent { border-color: transparent; }

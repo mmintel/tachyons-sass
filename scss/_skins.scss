@@ -16,8 +16,8 @@
 }
 
 @each $transparency in $transparencies {
-  $id: nth($gray, 1);
-  $value: nth($gray, 2);
+  $id: nth($transparency, 1);
+  $value: nth($transparency, 2);
 
   .white#{$id} {
     color: rgba(255,255,255,$value);

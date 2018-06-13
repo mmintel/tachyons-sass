@@ -10,11 +10,11 @@
   $breakpoint-value: nth($breakpoint, 2);
 
   @media #{$breakpoint-value} {
-    .ba#{$id}\@#{$breakpoint-id} { border-style: solid; border-width: 1px; }
-    .bt#{$id}\@#{$breakpoint-id} { border-top-style: solid; border-top-width: 1px; }
-    .br#{$id}\@#{$breakpoint-id} { border-right-style: solid; border-right-width: 1px; }
-    .bb#{$id}\@#{$breakpoint-id} { border-bottom-style: solid; border-bottom-width: 1px; }
-    .bl#{$id}\@#{$breakpoint-id} { border-left-style: solid; border-left-width: 1px; }
-    .bn#{$id}\@#{$breakpoint-id} { border-style: none; border-width: 0; }
+    .ba\@#{$breakpoint-id} { border-style: solid; border-width: 1px; }
+    .bt\@#{$breakpoint-id} { border-top-style: solid; border-top-width: 1px; }
+    .br\@#{$breakpoint-id} { border-right-style: solid; border-right-width: 1px; }
+    .bb\@#{$breakpoint-id} { border-bottom-style: solid; border-bottom-width: 1px; }
+    .bl\@#{$breakpoint-id} { border-left-style: solid; border-left-width: 1px; }
+    .bn\@#{$breakpoint-id} { border-style: none; border-width: 0; }
   }
 }

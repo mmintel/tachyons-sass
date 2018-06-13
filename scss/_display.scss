@@ -24,9 +24,6 @@
     $breakpoint-value: nth($breakpoint, 2);
 
     @media #{$breakpoint-value} {
-      .f#{$id}\@#{$breakpoint-id} {
-        font-size: $value;
-      }
       .dn\@#{$breakpoint-id} {              display: none; }
       .di\@#{$breakpoint-id} {              display: inline; }
       .db\@#{$breakpoint-id} {              display: block; }

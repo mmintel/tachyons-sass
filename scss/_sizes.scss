@@ -1,0 +1,87 @@
+@each $fixed-size in $fixed-sizes {
+  $id: nth($fixed-size, 1);
+  $value: nth($fixed-size, 2);
+
+  .h#{$id} {
+    height: $value;
+  }
+
+  .w#{$id} {
+    width: $value;
+  }
+
+  @each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
+
+    @media #{$breakpoint-value} {
+      .h#{$id}\@#{$breakpoint-id} {
+        height: $value;
+      }
+
+      .w#{$id}\@#{$breakpoint-id} {
+        width: $value;
+      }
+    }
+  }
+}
+
+@each $fluid-size in $fluid-sizes {
+  $id: nth($fluid-size, 1);
+  $value: nth($fluid-size, 2);
+
+  .h-#{$id} {
+    height: $value * 1rem;
+  }
+
+  .vh-#{$id} {
+    height: $value * 1vh;
+  }
+
+  .min-vh-#{$id} {
+    min-height: $value * 1vh;
+  }
+
+  .w-#{$id} {
+    width: $value * 1rem;
+  }
+
+  .vw-#{$id} {
+    width: $value * 1vw;
+  }
+
+  .min-vw-#{$id} {
+    min-width: $value * 1vw;
+  }
+
+  @each $breakpoint in $breakpoints {
+    $breakpoint-id: nth($breakpoint, 1);
+    $breakpoint-value: nth($breakpoint, 2);
+
+    @media #{$breakpoint-value} {
+      .h-#{$id}\@#{$breakpoint-id} {
+        height: $value * 1rem;
+      }
+
+      .vh-#{$id}\@#{$breakpoint-id} {
+        height: $value * 1vh;
+      }
+
+      .min-vh-#{$id}\@#{$breakpoint-id} {
+        min-height: $value * 1vh;
+      }
+
+      .w-#{$id}\@#{$breakpoint-id} {
+        width: $value * 1rem;
+      }
+
+      .vw-#{$id}\@#{$breakpoint-id} {
+        width: $value * 1vw;
+      }
+
+      .min-vw-#{$id}\@#{$breakpoint-id} {
+        min-width: $value * 1vw;
+      }
+    }
+  }
+}

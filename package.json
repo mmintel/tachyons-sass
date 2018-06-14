@@ -9,7 +9,7 @@
     "lint": "standard --fix",
     "prepublish": "npm run build"
   },
-  "repository": "@mmintel/tachyons-sass",
+  "repository": "mmintel/tachyons-sass",
   "keywords": [
     "tachyons",
     "tachyons-css",

@@ -14,7 +14,7 @@ $spacings: (
     @error 'Map doesnt have specified key.';
   }
 
-  @return map-get($spacings, $n);
+  @return map-get($spacings, $n) * 1rem;
 }
 
 $spacing-copy-separator: 1.5em !default;

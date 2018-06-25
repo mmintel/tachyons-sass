@@ -12,5 +12,5 @@ $thicknesses: (
     @error 'Map doesnt have specified key.';
   }
 
-  @return map-get($thicknesses, $n);
+  @return map-get($thicknesses, $n) * 1rem;
 }

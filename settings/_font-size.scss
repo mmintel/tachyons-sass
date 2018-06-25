@@ -14,6 +14,6 @@ $font-sizes: (
   @if not map-has-key($font-sizes, $n) {
     @error 'Map doesnt have specified key.';
   }
-  
-  @return map-get($font-sizes, $n);
+
+  @return map-get($font-sizes, $n) * 1rem;
 }

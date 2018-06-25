@@ -1,0 +1,15 @@
+$breakpoints: (
+  s: (max-width: 30em),
+  ns: (min-width: 30em),
+  m: (min-width: 30em) and (max-width: 60em),
+  l: (min-width: 60em) and (max-width: 80em),
+  xl: (min-width: 80em),
+) !default;
+
+@function get-breakpoint($n) {
+  @if not map-has-key($breakpoints, $n) {
+    @error 'Map doesnt have specified key.';
+  }
+
+  @return map-get($breakpoints, $n);
+}

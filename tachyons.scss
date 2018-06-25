@@ -6,6 +6,13 @@
 
 @import 'scss/variables';
 
+@import 'settings/font-size';
+@import 'settings/spacing';
+@import 'settings/breakpoint';
+@import 'settings/transparency';
+@import 'settings/thickness';
+@import 'settings/gray';
+
  //  Modules
  @import 'scss/box-sizing';
  @import 'scss/circle';

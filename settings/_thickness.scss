@@ -1,0 +1,16 @@
+$thicknesses: (
+  0: 0,
+  1: 0.125,
+  2: 0.25,
+  3: 0.5,
+  4: 1,
+  5: 2,
+) !default;
+
+@function get-thickness($n) {
+  @if not map-has-key($thicknesses, $n) {
+    @error 'Map doesnt have specified key.';
+  }
+
+  @return map-get($thicknesses, $n);
+}

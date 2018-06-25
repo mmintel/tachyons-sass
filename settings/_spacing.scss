@@ -1,0 +1,20 @@
+$spacings: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 2,
+  5: 4,
+  6: 8,
+  7: 16,
+) !default;
+
+@function get-spacing($n) {
+  @if not map-has-key($spacings, $n) {
+    @error 'Map doesnt have specified key.';
+  }
+
+  @return map-get($spacings, $n);
+}
+
+$spacing-copy-separator: 1.5em !default;

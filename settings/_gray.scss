@@ -1,0 +1,21 @@
+$grays: (
+  0: #000,
+  1: #111,
+  2: #333,
+  3: #555,
+  4: #777,
+  5: #999,
+  6: #aaa,
+  7: #ccc,
+  8: #eee,
+  9: #f4f4f4,
+  10: #fff,
+) !default;
+
+@function get-gray($n) {
+  @if not map-has-key($grays, $n) {
+    @error 'Map doesnt have specified key.';
+  }
+
+  @return map-get($grays, $n);
+}

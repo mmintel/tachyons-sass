@@ -5,18 +5,6 @@ $sans-serif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica
 $serif: georgia, serif !default;
 $code: consolas, monaco, monospace !default;
 
-$font-sizes: (
-  1: 3,
-  2: 2.25,
-  3: 1.5,
-  4: 1.25,
-  5: 1,
-  6: 0.875,
-  7: 0.75,
-  8: 0.6,
-  9: 0.5,
-) !default;
-
 $letter-spacing-tight: -.05em !default;
 $letter-spacing-1: .1em !default;
 $letter-spacing-2: .25em !default;
@@ -26,19 +14,6 @@ $line-height-copy: 1.5 !default;
 $measure: 30em !default;
 $measure-narrow: 20em !default;
 $measure-wide: 34em !default;
-
-$spacings: (
-  0: 0,
-  1: 0.25,
-  2: 0.5,
-  3: 1,
-  4: 2,
-  5: 4,
-  6: 8,
-  7: 16,
-) !default;
-
-$spacing-copy-separator: 1.5em !default;
 
 $fixed-sizes: (
   1: 1,
@@ -77,15 +52,6 @@ $radii: (
   4: 1,
 ) !default;
 
-$thicknesses: (
-  0: 0,
-  1: 0.125,
-  2: 0.25,
-  3: 0.5,
-  4: 1,
-  5: 2,
-) !default;
-
 $shadows: (
   1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 ),
   2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ),
@@ -96,42 +62,4 @@ $shadows: (
 
 $text-shadows: (
  1: 0 0 1px rgba(0,0,0, 0.2),
-) !default;
-
-$grays: (
-  0: #000,
-  1: #111,
-  2: #333,
-  3: #555,
-  4: #777,
-  5: #999,
-  6: #aaa,
-  7: #ccc,
-  8: #eee,
-  9: #f4f4f4,
-  10: #fff,
-) !default;
-
-$transparencies: (
-  0125: 0.0125,
-  025: 0.025,
-  05: 0.05,
-  10: 0.1,
-  20: 0.2,
-  30: 0.3,
-  40: 0.4,
-  50: 0.5,
-  60: 0.6,
-  70: 0.7,
-  80: 0.8,
-  90: 0.9,
-  95: 0.95,
-) !default;
-
-$breakpoints: (
-  s: (max-width: 30em),
-  ns: (min-width: 30em),
-  m: (min-width: 30em) and (max-width: 60em),
-  l: (min-width: 60em) and (max-width: 80em),
-  xl: (min-width: 80em),
 ) !default;

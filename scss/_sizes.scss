@@ -47,11 +47,11 @@
   $value: nth($fluid-size, 2);
 
   .h-#{$id} {
-    height: $value * 1rem;
+    height: $value * 1%;
   }
 
   .max-h-#{$id} {
-    max-height: $value * 1rem;
+    max-height: $value * 1%;
   }
 
   .vh-#{$id} {
@@ -59,11 +59,11 @@
   }
 
   .w-#{$id} {
-    width: $value * 1rem;
+    width: $value * 1%;
   }
 
   .max-w-#{$id} {
-    max-width: $value * 1rem;
+    max-width: $value * 1%;
   }
 
   .vw-#{$id} {
@@ -76,7 +76,7 @@
 
     @media #{$breakpoint-value} {
       .h-#{$id}\@#{$breakpoint-id} {
-        height: $value * 1rem;
+        height: $value * 1%;
       }
 
       .vh-#{$id}\@#{$breakpoint-id} {
@@ -88,7 +88,7 @@
       }
 
       .w-#{$id}\@#{$breakpoint-id} {
-        width: $value * 1rem;
+        width: $value * 1%;
       }
 
       .vw-#{$id}\@#{$breakpoint-id} {

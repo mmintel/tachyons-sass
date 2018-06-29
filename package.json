@@ -2,7 +2,7 @@
   "name": "@mmintel/tachyons-sass",
   "description": "Super flexible SCSS port of tachyons",
   "author": "Marc Mintel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "style": "tachyons.scss",
   "scripts": {
     "build": "node-sass ./tachyons.scss -o ./dist",

@@ -3,6 +3,7 @@
   "description": "Super flexible SCSS port of tachyons",
   "author": "Marc Mintel",
   "version": "0.0.2",
+  "access": "public",
   "style": "tachyons.scss",
   "scripts": {
     "build": "node-sass ./tachyons.scss -o ./dist",
